@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumes</title>
+    <title>During Your Journey!</title>
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -24,14 +24,14 @@
     <h1>During Your Journey!</h1>
   </header>
 <main id="main">
-  
+
 <section>
   <h2>Navigating Your Active Project</h2>
   <p>Master the art of adaptive project management, human-centered fieldwork, and constructive feedback as you execute your project in real time.</p>
 
   <img src="images/UMSI_Client_Presentation.jpg"
     alt="Team of students presenting their prototype"
-    width="400">
+    width="100">
 </section>
 
 <section>
@@ -44,13 +44,19 @@
 <section>
   <h2>Phase 3: Managing & Executing in the Field</h2>
   <p><i>Conducting research, tracking progress, and maintaining clear communication with project sponsors.</i></p>
-  <article>
-    <h3>Focus & Objectives</h3>
+  <article id="during-focus">
+    <button type="button" onclick="toggleDuringFocus()"
+        aria-expanded="false" aria-controls="duringFocusContent">
+    Focus & Objectives
+    <span aria-hidden="true">+</span>
+    </button>
+    <div id="duringFocusContent" hidden>
     <ul>
       <li><strong>Fieldwork & Research Methods:</strong> Apply human-centered design tools to observe contexts and extract insights.</li>
       <li><strong>Sponsor & Client Updates:</strong> Maintain transparency with regular progress reporting.</li>
       <li><strong>Feedback Loops:</strong> Gather, evaluate, and integrate constructive feedback mid-project.</li>
     </ul>
+    </div>
   </article>
 
 <article>
@@ -112,9 +118,9 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id = "year">2026</span> Regents of the University of Michigan</p>
     </footer>
-    
+<script src="js/script.js"></script>
 </body>
 
 </html>

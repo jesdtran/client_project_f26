@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumes</title>
+    <title>Preparing Your Journey!</title>
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -24,7 +24,7 @@
     <h1>Preparing Your Journey!</h1>
   </header>
 <main id="main">
-  
+
 <section>
   <h2>Launch Your Engaged Learning Journey</h2>
   <p>Transform your academic knowledge into real-world impact. Use this guide to understand your project context, evaluate team readiness, establish expectations, and begin a productive partnership.</p>
@@ -45,14 +45,26 @@
 <section>
   <h2>Phase 1: Preparing for the Experience</h2>
   <p>Before creating a solution, take time to understand the context, evaluate your team's readiness, and identify what you still need to learn.</p>
-  <article>
-    <h3>Approach the Work as a Collaborative Learner</h3>
+
+  <article id="approach">
+    <button type="button" onclick="toggleApproach()"
+        aria-expanded="false" aria-controls="approachContent">
+    Approach the Work as a Collaborative Learner
+    <span aria-hidden="true">+</span>
+    </button>
+    <div id="approachContent" hidden>
     <p>Before writing code, sketching wireframes, or analyzing data, consider how your identity and previous experiences influence the way you understand the project.</p>
     <p>Your role is not to enter an organization or community as an outside expert who will fix a problem. Your role is to listen, ask questions, contribute your developing expertise, and work alongside people who understand their organization and community.</p>
   </article>
 
-  <article>
-    <h3>Preparation Goals</h3>
+
+    <article id="preparation">
+    <button type="button" onclick="togglePreparation()"
+        aria-expanded="false" aria-controls="preparationContent">
+    Preparation Goals
+    <span aria-hidden="true">+</span>
+    </button>
+    <div id="preparationContent" hidden>
     <ul>
       <li><strong>Develop social and community awareness:</strong> Examine your identity, positionality, assumptions, and privileges. Learn about the community's history and consider how power may affect participation and decision-making.
       </li>
@@ -61,11 +73,17 @@
       <li><strong>Begin project scoping:</strong> Learn about the organization's needs, intended users, constraints, and desired outcomes before committing to a solution.
       </li>
     </ul>
+    </div>
   </article>
 </section>
 
-  <article>
-    <h3>Questions to Consider</h3>
+  <article id="questions">
+    <button type="button" onclick="toggleQuestions()"
+        aria-expanded="false" aria-controls="questionsContent">
+    Questions to Consider
+    <span aria-hidden="true">+</span>
+    </button>
+<div id="questionsContent" hidden>
     <ul>
       <li>What do I hope to learn from this experience?</li>
       <li>Who will be affected by the project and its outcomes?</li>
@@ -75,10 +93,16 @@
       <li>How will the partner participate in project decisions?</li>
       <li>What would a mutually beneficial outcome look like?</li>
     </ul>
+    </div>
   </article>
 
-  <article>
-    <h3>Recommended Preparation Process</h3>
+  <article id="process">
+    <button type="button" onclick="toggleProcess()"
+        aria-expanded="false" aria-controls="processContent">
+    Recommended Preparation Process
+    <span aria-hidden="true">+</span>
+    </button>
+<div id="processContent" hidden>
     <ol>
       <li><strong>Reflect on your position:</strong> Identify the experiences, identities, assumptions, and areas of privilege that may shape your approach.</li>
       <li><strong>Learn about the context:</strong> Research the organization, community, project history, affected stakeholders, and broader social conditions.</li>
@@ -87,11 +111,12 @@
       <li><strong>Identify open questions:</strong> Write down what your team needs to learn from the partner before confirming the project's scope, methods, or deliverables.
       </li>
     </ol>
+  </div>
   </article>
 
   <article>
     <h3>Featured Preparation Resources</h3>
-    <ul>
+    <ul class="resources">
       <li><a href="https://sites.lsa.umich.edu/equitable-teaching/social-identity-snapshot">Social Identity Snapshot</a>: Diagnostic tool to reflect on self-awareness and positionality before entering community contexts.</li>
       <li><a href="https://docs.google.com/document/d/1Qt9YeStVwDHjwJhOLAz42JSNQR2lFMurdUtxtdrGkuc/edit?tab=t.0#heading=h.ch0bvccjkrzn">"Check Yourself" Community Engagement Checklist</a>: Quick audit for personal assumptions and ethical readiness.</li>
       <li><a href="https://drive.google.com/file/d/1zc1RNlrDxV51-muOERdDTnINQcquJpOA/view?usp=sharing">IAP2 Spectrum of Public Participation</a>: Framework for understanding levels of community involvement and decision-making power.</li>
@@ -113,9 +138,9 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id = "year">2026</span> Regents of the University of Michigan</p>
     </footer>
-    
+    <script src="js/script.js"></script>
 </body>
 
 </html>

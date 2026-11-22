@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumes</title>
+    <title>Starting Your Journey!</title>
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -52,18 +52,31 @@
  <section>
   <h2>Phase 2: Starting the Experience</h2>
   <p>Establishing professional communication, conducting initial meetings, and finalizing partnership agreements.</p>
-  <article>
-    <h3>Value & Narrative</h3>
+
+  <article id="narrative">
+    <button type="button" onclick="toggleNarrative()"
+        aria-expanded="false" aria-controls="narrativeContent">
+    Value & Narrative
+    <span aria-hidden="true">+</span>
+    </button>
+    <div id="narrativeContent" hidden>
     <p>First impressions shape the trajectory of a partnership. The starting phase is where abstract project ideas turn into structured, professional commitments. By establishing clear team contracts, co-creating agendas, and aligning on project scope early, you build <strong> safety within your team and trust with your client.</strong> Learning how to navigate early ambiguity is one of the most valuable professional capabilities you will gain at UMSI.</p>
+    </div>
   </article>
 
-  <article>
-    <h3>Focus & Objectives</h3>
-    <ul class="focus-grid">
+  <article id="starting-focus">
+    <button type="button" onclick="toggleStartingFocus()"
+        aria-expanded="false" aria-controls="startingFocusContent">
+    Focus & Objectives
+    <span aria-hidden="true">+</span>
+    </button>
+    <div id="startingFocusContent" hidden>
+    <ul>
       <li><strong>Partner Communication:</strong> Draft clear, professional outreach to launch working relationships.</li>
       <li><strong>First Meetings:</strong> Structure productive kickoff meetings that define roles and project bounds.</li>
       <li><strong>Formalizing Agreements:</strong> Document team commitments and scope agreements shared by all stakeholders.</li>
     </ul>
+    </div>
   </article>
 
   <article>
@@ -90,8 +103,9 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id = "year">2026</span> Regents of the University of Michigan</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
